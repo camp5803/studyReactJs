@@ -7,8 +7,6 @@ app.get("/", (req, res) => {
   res.sendFile("index.html");
 });
 
-app.listen(80, (server) => {
-  let host = server.host;
-  let port = server.port;
-  console.log("server listening on {host}:{port}");
+app.listen(80, () => {
+  console.log("server listening");
 });
