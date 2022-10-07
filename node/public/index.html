@@ -13,13 +13,14 @@
     <div id="root"></div>
   </body>
   <script type="text/babel">
+    const root = document.getElementById("root");
     const App = () => {
       const [counter, setCounter] = React.useState();
       const countUp = () => setCounter(counter + 1);
       return (
         <div>
-          <button onClick= { countUp } >Cilck me!</button>
-          <h3>count : { counter }</h3>
+          <button onClick= {countUp} >Cilck me!</button>
+          <h3>count : {counter}</h3>
         </div>
       )
     };
