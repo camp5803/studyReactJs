@@ -13,17 +13,14 @@
     <div id="root"></div>
   </body>
   <script type="text/babel">
-    let counter = 0;
-    const countUp = () => {
-      counter += 1;
-      ReactDOM.render(<Container />, root);
-    }
-    const Container = () => (
+    const App = () => (
       <div>
+        const [counter, setCounter] = React.useState();
+        const countUp = () => setCounter(counter + 1);
         <button onClick= { countUp } >Cilck me!</button>
         <h3>count : { counter }</h3>
       </div>
     );
-    ReactDOM.render(<Container />, root);
+    ReactDOM.render(<App />, root);
   </script>
 </html>
