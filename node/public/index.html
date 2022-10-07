@@ -14,9 +14,9 @@
   </body>
   <script type="text/babel">
     const App = () => (
+      const [counter, setCounter] = React.useState();
+      const countUp = () => setCounter(counter + 1);
       <div>
-        const [counter, setCounter] = React.useState();
-        const countUp = () => setCounter(counter + 1);
         <button onClick= { countUp } >Cilck me!</button>
         <h3>count : { counter }</h3>
       </div>
