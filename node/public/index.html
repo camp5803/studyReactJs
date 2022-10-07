@@ -13,29 +13,15 @@
     <div id="root"></div>
   </body>
   <script type="text/babel">
-    const Button = () => (
-      <button
-        style={{
-          backgroundColor: "tomato",
-        }}
-        onClick={() => {
-          console.log("you just clicked");
-        }}
-      >
-        Click me!
-      </button>
-    );
-    const Title = () => (
-      <h3 id="title"
-        onMouseEnter={() => { console.log("you just entered mouse") }}
-      >
-        Hi im title
-      </h3>
-    )
+    let counter = 0;
+    const countUp = () => {
+      counter += 1;
+      reactDOM.render(<Container />, root);
+    }
     const Container = () => (
       <div>
-        <Button />
-        <Title />
+        <button onClick= { countUp } >Cilck me!</button>
+        <h3>count : { counter }</h3>
       </div>
     );
     ReactDOM.render(<Container />, root);
